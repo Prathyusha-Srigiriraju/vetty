@@ -43,6 +43,7 @@ export class AppComponent {
 
     
     if(!this.checkModal)  {this.main_Array.push(value)} 
+    if (value.table == null) {value.table = 'Todo'; this.main_Array.push(value);}
     else if(this.submitType == 'Inprogress') { value.table = 'Inprogress'; this.main_Array.push(value); }
     else if(this.submitType == 'Todo')  { value.table = 'Todo'; this.main_Array.push(value); }
     else if(this.submitType == 'Etc') { value.table = 'Etc'; this.main_Array.push(value) }
